@@ -1,0 +1,46 @@
+<div id="game-container">
+  <h1>Numeron Game</h1>
+  <p>1から順番にクリックして消していきましょう。</p>
+  <div style="text-align: center;"><button id="start-game">スタート</button></div>
+  <div id="game-board" style="display: none;"></div>
+  <p id="timer">経過時間: <span id="time">0.00</span>秒</p>
+</div>
+
+<style>
+  #game-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .number-button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: orange; /* オレンジ色の背景 */
+    color: white; /* 文字色を白に */
+    border: none; /* 枠線なし */
+    border-radius: 5px; /* 角を少し丸く */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* シャドウ効果 */
+    transition: transform 0.1s, box-shadow 0.1s; /* アニメーション効果 */
+  }
+
+  .number-button:active {
+      transform: scale(0.95); /* ボタンを押した時の縮小効果 */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* シャドウの縮小 */
+  }
+
+  #timer {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+</style>
